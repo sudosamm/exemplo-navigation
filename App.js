@@ -5,7 +5,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 
 // Importar as telas
 import Login from './src/pages/Login';
-import Pages from "./src/components/pages";
+import Pages from './src/components/Pages';
 
 // Define a criação do modo de navegação principal por meio de pilhas
 const Stack = createNativeStackNavigator();
@@ -26,11 +26,10 @@ export default function App () {
           }}
         />
         <Stack.Screen
-          name="Home"
-          component={Home}
+          name="Pages"
+          component={Pages}
           options={{
-            title: "Homie",
-            headerShown: true
+            headerShown: false
           }}
         />
       </Stack.Navigator>

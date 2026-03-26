@@ -3,13 +3,15 @@ import { useState } from 'react';
 
 export default function Login({ navigation }){
     const [user, setUser] = useState("");
+    
     function entrar() {
         if(user === "Aluno"){
-            navigation.navigate("Home", {usuario: user});
+            navigation.navigate("Pages", {usuario: user});
         } else {
             alert("O usuário está incorreto");
         }
     }
+
     return(
         <View>
             <Text>Insira o nome de usuário:</Text>
